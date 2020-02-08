@@ -8,6 +8,7 @@ Bundler.require(*Rails.groups)
 
 module GitApp
   class Application < Rails::Application
+    config.action_view.automatically_disable_submit_tag = false
     # Initialize configuration defaults for originally generated Rails version.
     config.i18n.default_locale = :ja
     config.time_zone = 'Tokyo'
