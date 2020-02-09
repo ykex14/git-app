@@ -35,6 +35,7 @@
     }
   }
   &__group-list{
+    color: white;
     background-color:#2f3e51 ;
     height: calc(100vh - 100px);
     padding: 20px;
@@ -164,7 +165,6 @@
             border-style: none;
             padding:0 40px 0 10px;
           }
-          .form__mask{
             .form__mask__image{
               position: absolute;
               top: 10px;
@@ -175,7 +175,6 @@
                 display: none;
               }
             }
-          }
         }
       .form__submit{
         width: 100px;
