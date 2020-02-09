@@ -49,8 +49,7 @@ $(function(){
       `</div>`
     };
     return html;
-  };
-  function buildHTML(message){
+  
     if ( message.image ) {
       var html =
        `<div class="main-chat__message-list__message" data-message-id=${message.id}>
@@ -89,7 +88,8 @@ $(function(){
         </div>`
       return html;
     };
-  }
+  };
+
 $('#new_message').on('submit', function(e){
   e.preventDefault();
   var formData = new FormData(this);
@@ -114,7 +114,6 @@ $('#new_message').on('submit', function(e){
 });
   var reloadMessages = function() {
     var last_message_id = $('.main-chat__message-list__message:last').data("message-id");
-    console.log(last_message_id)
     $.ajax({
       url: "api/messages",
       type: 'get',
@@ -132,6 +131,7 @@ $('#new_message').on('submit', function(e){
       }
     })
     .fail(function() {
+      alert('メッセージの更新に失敗しました')
     });
   };
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
