@@ -39,6 +39,9 @@
     background-color:#2f3e51 ;
     height: calc(100vh - 100px);
     padding: 20px;
+    .group{
+      color: white;
+    }
     &__group{
       margin-bottom: 40px;
       &__name{
